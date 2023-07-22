@@ -16,5 +16,17 @@ class GitHub:
 
         return body #повертаємо його
     
+    def search_emoji(self):
+        r = requests.get('https://api.github.com/emojis')
+        r_json = r.json()
+
+        return r_json
+    
+    def github_comits_request(self):
+        r = requests.get('https://api.github.com/repos/valentiniisus/Valentyn_QA_AUTO/commits')
+        r_json = r.json()
+
+        return r_json
+    
 
     
